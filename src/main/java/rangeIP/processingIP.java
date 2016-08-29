@@ -24,23 +24,26 @@ public class processingIP {
 	}
     
     void showAddress(String ip1,String ip2){
-    	subIp1 = ip1.substring(0, ip1.lastIndexOf("."));//строка подсети
-		if(ip2.startsWith(subIp1)){					//совпадают ли подсети введенных ip
-			startAddress = Integer.parseInt(ip1.substring(ip1.lastIndexOf(".")+1));//индекс адреса ip1
-			endAddress = Integer.parseInt(ip2.substring(ip2.lastIndexOf(".")+1));//индекс адреса ip2
+    	//СЃС‚СЂРѕРєР° РїРѕРґСЃРµС‚Рё
+    	subIp1 = ip1.substring(0, ip1.lastIndexOf("."));
+    	//СЃРѕРІРїР°РґР°СЋС‚ Р»Рё РїРѕРґСЃРµС‚Рё РІРІРµРґРµРЅРЅС‹С… ip
+		if(ip2.startsWith(subIp1)){
+			//РёРЅРґРµРєСЃС‹ Р°РґСЂРµСЃРѕРІ ip1 Рё ip2
+			startAddress = Integer.parseInt(ip1.substring(ip1.lastIndexOf(".")+1));
+			endAddress = Integer.parseInt(ip2.substring(ip2.lastIndexOf(".")+1));
     	
 			if(startAddress<endAddress){	
-				System.out.println("Доступые IP адреса в указанном диапазоне:");
+				System.out.println("Р”РѕСЃС‚СѓРїРЅС‹Рµ IP Р°РґСЂРµСЃР° РІ РІРІРµРґРµРЅРЅРѕРј РґРёР°РїР°Р·РѕРЅРµ:");
 				for(startAddress++;startAddress<endAddress;startAddress++)
 					System.out.println(subIp1+"."+startAddress);
 			}
 			else{
-				System.out.println("Доступые IP адреса в указанном диапазоне:");
+				System.out.println("Р”РѕСЃС‚СѓРїРЅС‹Рµ IP Р°РґСЂРµСЃР° РІ РІРІРµРґРµРЅРЅРѕРј РґРёР°РїР°Р·РѕРЅРµ:");
 				for(endAddress++;endAddress<startAddress;endAddress++)
 					System.out.println(subIp1+"."+endAddress);
 			}
 		}
 		else
-			System.out.println("Подсети не одинаковы!");
+			System.out.println("РџРѕРґСЃРµС‚Рё РЅРµ СЃРѕРІРїР°РґР°СЋС‚!");
     }
 }

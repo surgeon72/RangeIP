@@ -5,8 +5,8 @@ public class rangeIP {
 		byte IP1[] = new byte[15];
 		byte IP2[] = new byte[15];
 		String strIp1="";String strIp2="";
-		System.out.println("Данная программа перебирает все допустимые IP адреса в введенном диапазоне.");
-		System.out.println("Введите IP 1:");
+		System.out.println("Р”Р°РЅРЅР°СЏ РїСЂРѕРіСЂР°РјРјР° РѕС‚РѕР±СЂР°Р¶Р°РµС‚ РІСЃРµ IP Р°РґСЂРµСЃР° РІ РІРІРµРґРµРЅРЅРѕРј РґРёР°РїР°Р·РѕРЅРµ.");
+		System.out.println("Р’РІРµРґРёС‚Рµ IP 1:");
 		System.in.read(IP1);
 		
 		for(int i = 0;i<IP1.length;i++)
@@ -15,7 +15,7 @@ public class rangeIP {
 				
 		processingIP procIp = new processingIP();
 		if(procIp.validIP(strIp1)){
-			System.out.println("Введите IP 2:");
+			System.out.println("Р’РІРµРґРёС‚Рµ IP 2:");
 			System.in.read(IP2);
 		
 		for(int i = 0;i<IP2.length;i++)
@@ -27,10 +27,10 @@ public class rangeIP {
 			procIp.showAddress(strIp1,strIp2);
 		}
 		else
-			System.out.println("Введенный адрес не соответствует протоколу IPv4!");
+			System.out.println("Р’РІРµРґРµРЅРЅС‹Р№ Р°РґСЂРµСЃ РЅРµ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓРµС‚ РїСЂРѕС‚РѕРєРѕР»Сѓ IPv4!");
 		
 	}
 		else
-			System.out.println("Введенный адрес не соответствует протоколу IPv4!");
+			System.out.println("Р’РІРµРґРµРЅРЅС‹Р№ Р°РґСЂРµСЃ РЅРµ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓРµС‚ РїСЂРѕС‚РѕРєРѕР»Сѓ IPv4!");
 }
 }
